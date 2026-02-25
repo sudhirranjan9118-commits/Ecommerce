@@ -20,13 +20,12 @@ include_once('connection.php');
                             <li><a href="users-list.php">Users List</a></li>
                             <li><a href="customers-list.php">Customers List</a></li>
                             <li><a href="roles.php">Roles</a></li>
-                            <li><a href="role_menu.php">Role Menu</a></li>
                             <li><a href="Enum_type.php">Enum Types</a></li>
+                             <li><a href="Enum.php">Enum</a></li>
                         </ul>
                     </div>
                 </li>
 
-                <!-- ================= PRODUCT ================= -->
                 <li>
                     <a href="#productId" data-bs-toggle="collapse">
                         <i data-feather="package"></i>
@@ -64,7 +63,6 @@ include_once('connection.php');
                     </div>
                 </li>
 
-                <!-- ================= DYNAMIC ROLES ================= -->
                 <?php
                 $roleQuery = "SELECT * FROM roles ORDER BY position ASC, id DESC";
                 $roleResult = mysqli_query($conn, $roleQuery);
@@ -77,12 +75,6 @@ include_once('connection.php');
                             ? $role['icon']
                             : 'mdi mdi-circle-outline';
 
-                        // fetch role menus
-                        $menuQuery = "
-                            SELECT * FROM role_menu
-                            WHERE role_id = {$role['id']}
-                            ORDER BY id ASC
-                        ";
                         $menuResult = mysqli_query($conn, $menuQuery);
                 ?>
                         <li>
