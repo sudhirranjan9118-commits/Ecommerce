@@ -23,7 +23,7 @@ if(isset($_SESSION['auth_user'])) {
 
                     <!-- Start Content-->
                     <div class="container-fluid">
-                        
+
                         <!-- start page title -->
                         <div class="row">
                             <div class="col-12">
@@ -91,61 +91,65 @@ if(isset($_SESSION['auth_user'])) {
                                            </div>
                                            <br/> <br/> <br/> <br/>
                                            <div class="col-lg-4">
-                                               <label for="product-quantity">Quantity <span class="text-danger">*</span></label>
-                                               <input type="Number" step="any" class="form-control" id="product-quantity" name="quantity" placeholder="Enter quantity">
-                                           </div>
-                                           <br/> <br/> <br/> <br/>
-                                           <div class="col-lg-4">
-                                               <label for="product-discount">Discount <span class="text-danger">*</span></label>
-                                               <input type="Number" step="any" class="form-control" id="product-discount" name="discount" placeholder="Enter discount">
-                                           </div>
-                                           <br/> <br/> <br/> <br/>
-                                           <div class="col-lg-4">
-                                             <label for="product-tax-rate">Tax Rate <span class="text-danger">*</span></label>
-                                             <input type="Number" step="any"class="form-control" id="product-tax-rate" name="tax_rate" placeholder="Enter tax rate">
-                                         </div>
-                                         <br/> <br/> <br/> <br/>
-                                         <div class="col-lg-4">
-                                             <label class="mb-2">Status <span class="text-danger">*</span></label>
-                                             <div class="radio form-check-inline">
-                                                 <input type="radio" id="inlineRadio1" value="online" name="status" checked="">
-                                                 <label for="inlineRadio1"> Online </label>
-                                             </div>
-                                             <div class="radio form-check-inline">
-                                                 <input type="radio" id="inlineRadio2" value="offline" name="status">
-                                                 <label for="inlineRadio2"> Offline </label>
-                                             </div>
-                                             <div class="radio form-check-inline">
-                                                 <input type="radio" id="inlineRadio3" value="draft" name="status">
-                                                 <label for="inlineRadio3"> Draft </label>
-                                             </div>
-                                         </div>
-                                         <div class="col-lg-12">
-                                            <label for="product-description" class="form-label">Product Description <span class="text-danger">*</span></label>
-                                            <textarea class="form-control" name="description"></textarea>
+                                            <label>Old Price<span class="text-danger">*</span></label><input type="number"class="form-control"name="old_price"placeholder="Enter old price">
                                         </div>
-                                        <div class="col-lg-12">
-                                            <label for="product-images" class="form-label">Product Images <span class="text-danger">*</span></label>
-                                            <input type="file" name="file_name" class="form-control">
-                                        </div>
-                                        <div class="row">
-                                          <div class="col-12">
-                                            <div class="text-center mb-3">
-                                                <button type="submit" name="save-products" class="btn btn-success">Save</button>
-                                            </div>
+                                        <br/> <br/> <br/> <br/>
+                                        <div class="col-lg-4">
+                                           <label for="product-quantity">Quantity <span class="text-danger">*</span></label>
+                                           <input type="Number" step="any" class="form-control" id="product-quantity" name="quantity" placeholder="Enter quantity">
+                                       </div>
+                                       <br/> <br/> <br/> <br/>
+                                       <div class="col-lg-4">
+                                           <label for="product-discount">Discount <span class="text-danger">*</span></label>
+                                           <input type="Number" step="any" class="form-control" id="product-discount" name="discount" placeholder="Enter discount">
+                                       </div>
+                                       <br/> <br/> <br/> <br/>
+                                       <div class="col-lg-4">
+                                         <label for="product-tax-rate">Tax Rate <span class="text-danger">*</span></label>
+                                         <input type="Number" step="any"class="form-control" id="product-tax-rate" name="tax_rate" placeholder="Enter tax rate">
+                                     </div>
+                                     <br/> <br/> <br/> <br/>
+                                     <div class="col-lg-4">
+                                         <label class="mb-2">Status <span class="text-danger">*</span></label>
+                                         <div class="radio form-check-inline">
+                                             <input type="radio" id="inlineRadio1" value="online" name="status" checked="">
+                                             <label for="inlineRadio1"> Online </label>
+                                         </div>
+                                         <div class="radio form-check-inline">
+                                             <input type="radio" id="inlineRadio2" value="offline" name="status">
+                                             <label for="inlineRadio2"> Offline </label>
+                                         </div>
+                                         <div class="radio form-check-inline">
+                                             <input type="radio" id="inlineRadio3" value="draft" name="status">
+                                             <label for="inlineRadio3"> Draft </label>
+                                         </div>
+                                     </div>
+                                     <div class="col-lg-12">
+                                        <label for="product-description" class="form-label">Product Description <span class="text-danger">*</span></label>
+                                        <textarea class="form-control" name="description"></textarea>
+                                    </div>
+                                    <div class="col-lg-12">
+                                        <label for="product-images" class="form-label">Product Images <span class="text-danger">*</span></label>
+                                        <input type="file" name="file_name" class="form-control">
+                                    </div>
+                                    <div class="row">
+                                      <div class="col-12">
+                                        <div class="text-center mb-3">
+                                            <button type="submit" name="save-products" class="btn btn-success">Save</button>
                                         </div>
                                     </div>
-                                </form>
-                            </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
-            </form>
-            
-        </div> 
-    </div> 
+            </div>
+        </form>
 
-    <?php include 'Admin/footer.php' ; ?>
+    </div> 
+</div> 
+
+<?php include 'Admin/footer.php' ; ?>
 </div>
 
 </div>

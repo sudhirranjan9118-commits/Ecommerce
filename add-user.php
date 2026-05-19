@@ -62,18 +62,13 @@ if(isset($_SESSION['auth_user']))
 														?>
 													</div>
 													<div class="mb-3">
-                                                        <label for="mobile_number" class="form-label">Mobile Number</label>
-                                                          <input class="form-control" type="number" name="mobile" id="mobile_number" required placeholder="Enter your mobile number">
-                                                           <?php if(isset($_SESSION['errors']['mobile'])) { 
-                                                            echo '<span class="text-danger">'.$_SESSION['errors']['mobile'].'</span>'; 
-                                                               unset($_SESSION['errors']['mobile']); 
-                                                                } ?>
-                                                     </div>
-
-
-
-
-
+														<label for="mobile_number" class="form-label">Mobile Number</label>
+														<input class="form-control" type="number" name="mobile" id="mobile_number" required placeholder="Enter your mobile number">
+														<?php if(isset($_SESSION['errors']['mobile'])) { 
+															echo '<span class="text-danger">'.$_SESSION['errors']['mobile'].'</span>'; 
+															unset($_SESSION['errors']['mobile']); 
+														} ?>
+													</div>
 													<div class="mb-3">
 														<label for="password" class="form-label">Password</label>
 														<input class="form-control" type="password" name="password" required="" placeholder="Enter your password">

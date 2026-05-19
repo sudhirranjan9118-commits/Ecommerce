@@ -7,7 +7,6 @@ if(isset($_SESSION['auth_user']))
 <!DOCTYPE html>
 <html lang="en">
 <?php include ('connection.php'); ?>
-    
     <body class="loading" >
         <div id="wrapper">
             <?php include 'admin/head.php'; ?>
@@ -32,7 +31,6 @@ if(isset($_SESSION['auth_user']))
                                 </div>
                             </div>
                         </div>     
-
                         <div class="row">
                             <div class="col-md-6 col-xl-3">
                                 <div class="card">

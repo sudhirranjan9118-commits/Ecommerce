@@ -5,10 +5,7 @@ include_once('connection.php');
 <div class="left-side-menu">
     <div class="h-100" data-simplebar>
         <div id="sidebar-menu">
-
             <ul id="side-menu">
-
-                <!-- ================= ADMIN STATIC MENU ================= -->
                 <li>
                     <a href="#AdminDashboard" data-bs-toggle="collapse">
                         <i data-feather="users"></i>
@@ -21,11 +18,10 @@ include_once('connection.php');
                             <li><a href="customers-list.php">Customers List</a></li>
                             <li><a href="roles.php">Roles</a></li>
                             <li><a href="Enum_type.php">Enum Types</a></li>
-                             <li><a href="Enum.php">Enum</a></li>
+                             <li><a href="Enums.php">Enum</a></li>
                         </ul>
                     </div>
                 </li>
-
                 <li>
                     <a href="#productId" data-bs-toggle="collapse">
                         <i data-feather="package"></i>

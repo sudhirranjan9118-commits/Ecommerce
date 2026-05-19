@@ -8,7 +8,6 @@ if(isset($_SESSION['auth_user']))
     ?>
     <!DOCTYPE html>
     <html lang="en">
-
     <?php include 'admin/head.php'; ?>
     <body class="loading">
         <div id="wrapper">
@@ -17,8 +16,6 @@ if(isset($_SESSION['auth_user']))
             <div class="content-page">
                 <div class="content">
                     <div class="container-fluid">
-
-
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box">
@@ -26,8 +23,6 @@ if(isset($_SESSION['auth_user']))
                                 </div>
                             </div>
                         </div>
-
-
                         <div class="row">
                             <div class="col-12">
                                 <div class="card">
@@ -62,7 +57,6 @@ if(isset($_SESSION['auth_user']))
                                 </div>
                             </div>
                         </div>
-
                         <div class="row">
                             <?php
                             $query="SELECT *from products;";
@@ -76,77 +70,64 @@ if(isset($_SESSION['auth_user']))
                                     <div class="col-md-1 col-xl-3">
                                         <div class="card product-box">
                                             <div class="card-body">
-                                            <div class="product-action"> 
-                                              <a href="update-products.php?id=<?php echo $product->id; ?>" class="btn btn-success btn-xs waves-effect waves-light">
-                                               <i class="mdi mdi-pencil"></i>
-                                             </a> 
-                                              <a href="delete-products.php?id=<?php echo $product->id; ?>" class="btn  btn-danger btn-xs waves-effect waves-light" onclick="return confirm(' Are you sure you want to delete this product?');">
+                                                <div class="product-action"> 
+                                                  <a href="update-products.php?id=<?php echo $product->id; ?>" class="btn btn-success btn-xs waves-effect waves-light">
+                                                   <i class="mdi mdi-pencil"></i>
+                                               </a> 
+                                               <a href="delete-products.php?id=<?php echo $product->id; ?>" class="btn  btn-danger btn-xs waves-effect waves-light" onclick="return confirm(' Are you sure you want to delete this product?');">
                                                  <i class="mdi mdi-close"></i>
-                                              </a> 
-                                        </div>
-                                                <div class="bg-light" style="width: 200px; height: 200px; overflow: hidden;">
-                                                  <img src="<?php echo $product->file ?>" alt="product-pic" class="img-fluid" style="width: 100%; height: 100%; object-fit: cover;" />
+                                             </a> 
+                                         </div>
+                                         <div class="bg-light" style="width: 200px; height: 200px; overflow: hidden;">
+                                          <img src="<?php echo $product->file ?>" alt="product-pic" class="img-fluid" style="width: 100%; height: 100%; object-fit: cover;" />
+                                      </div>
+
+                                      <div class="product-info">
+                                        <div class="row align-items-center">
+                                            <div class="col">
+                                                <h5 class="font-16 mt-0 sp-line-1"><a href="ecommerce-product-detail.html" class="text-dark"><?php echo $product->name ?></a> </h5>
+                                                <div class="text-warning mb-2 font-13">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
                                                 </div>
-
-                                                <div class="product-info">
-                                                    <div class="row align-items-center">
-                                                        <div class="col">
-                                                            <h5 class="font-16 mt-0 sp-line-1"><a href="ecommerce-product-detail.html" class="text-dark"><?php echo $product->name ?></a> </h5>
-                                                            <div class="text-warning mb-2 font-13">
-                                                                <i class="fa fa-star"></i>
-                                                                <i class="fa fa-star"></i>
-                                                                <i class="fa fa-star"></i>
-                                                                <i class="fa fa-star"></i>
-                                                            </div>
-                                                            <h5 class="m-0"> <span class="text-muted"> Stocks : <?php echo $product->quantity ?></span></h5>
-                                                        </div>
-                                                        <div class="col-auto">
-                                                            <div class="product-price-tag">
-                                                                INR <?php echo $product->unit_price ?>
-                                                            </div>
-                                                            <div class="View Details my-lg-3 mx-3"> 
-    <a href="products-detail.php?id=<?php echo $product->id; ?>">View Details</a> 
-</div>
-
-                            
-
-                                                        </div>
-
-                                                    </div>
-
+                                                <h5 class="m-0"> <span class="text-muted"> Stocks : <?php echo $product->quantity ?></span></h5>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="product-price-tag">
+                                                    INR <?php echo $product->unit_price ?>
+                                                </div>
+                                                <div class="View Details my-lg-3 mx-3"> 
+                                                    <a href="products-detail.php?id=<?php echo $product->id; ?>">View Details</a> 
                                                 </div>
                                             </div>
-
                                         </div>
-
                                     </div>
-                                    <?php
-                                }
-                            }
-                            ?>
-
-
-
+                                </div>
+                            </div>
                         </div>
-
-
-
-                    </div>
-                </div>
+                        <?php
+                    }
+                }
+                ?>
             </div>
-            <?php include 'admin/footer.php'; ?>
         </div>
+    </div>
+</div>
+<?php include 'admin/footer.php'; ?>
+</div>
 
-        <div class="rightbar-overlay"></div>
+<div class="rightbar-overlay"></div>
 
-        <script src="assets/js/vendor.min.js"></script>
+<script src="assets/js/vendor.min.js"></script>
 
-        <script src="assets/js/app.min.js"></script>
+<script src="assets/js/app.min.js"></script>
 
 
-    </body>
-    </html>
-    <?php
+</body>
+</html>
+<?php
 }
 else
 {
